@@ -10,14 +10,14 @@ privacidade.html            política de privacidade / LGPD
 blog/index.html             listagem de artigos
 blog/*.html                 artigos individuais
 assets/site.css             CSS compartilhado por todas as páginas (design system)
-assets/logo.png             logotipo (arquivo de origem, em alta resolução — não é mais usado em tamanho grande no site)
+assets/logo.png             logotipo (arquivo de origem, em alta resolução)
 assets/foto.png             foto de perfil (arquivo de origem, em alta resolução)
-assets/foto-hero-*.webp/.jpg  recorte de rosto/tronco (4:5) usado no hero, em variantes responsivas
-assets/foto-about-*.webp/.jpg recorte de corpo inteiro usado na seção "Sobre mim", em variantes responsivas
-assets/og-image.jpg         imagem de compartilhamento (1200x630, gerada a partir do retrato + tipografia da marca)
+assets/logo-*.webp/.jpg     variantes responsivas do logo, exibido no topo do hero
+assets/foto-about-*.webp/.jpg única foto dela no site, na seção "Sobre mim", em variantes responsivas
+assets/og-image.jpg         imagem de compartilhamento (1200x630, logo + retrato + tipografia da marca)
 assets/favicon.png          favicon
 scripts/optimize-images.py  regera as variantes acima a partir dos originais
-scripts/fonts/               fontes (Fraunces/Inter, licença SIL OFL) usadas para gerar a og-image
+scripts/fonts/               fontes (Cormorant Garamond/Quicksand, licença SIL OFL) usadas para gerar a og-image
 CNAME                        domínio custom do GitHub Pages
 robots.txt
 sitemap.xml
@@ -29,13 +29,15 @@ Todo o texto de cada página está no próprio HTML. O CSS é compartilhado via 
 
 ## Design
 
-O visual é uma identidade editorial "clínica particular calma": serifa **Fraunces** para títulos, sans-serif **Inter** para corpo/UI, paleta neutra e restrita (off-white + lavanda/rosa suaves como acento, uma cor escura para texto) derivada da marca já existente — sem inundar a interface de rosa/roxo. Os tokens de cor e tipografia ficam no topo de `assets/site.css` (bloco `:root`).
+O visual é uma identidade editorial "clínica particular calma": serifa **Cormorant Garamond** para títulos, sans-serif **Quicksand** para corpo/UI — a paleta e a tipografia originais do site, com cores neutras e restritas (off-white + lavanda/rosa suaves como acento, uma cor escura para texto) derivadas da marca já existente. Os tokens de cor e tipografia ficam no topo de `assets/site.css` (bloco `:root`).
 
-Cada seção da página principal usa um tratamento visual diferente de propósito (para dar ritmo, evitar "tudo em card"): tira de confiança em colunas com divisórias finas, "Sobre mim" com foto + citação editorial, "Minha abordagem" como lista numerada (I–IV), "Psicoterapia para quê" com marcadores de borda lateral, "Benefícios" em colunas simples, e a seção final de contato como um bloco de cor sólida (o momento visual mais forte da página). O logotipo completo (com texto pequeno) não é mais exibido em tamanho grande — o cabeçalho usa apenas a marca tipográfica "Diana Nogueira".
+Cada seção da página principal usa um tratamento visual diferente de propósito (para dar ritmo, evitar "tudo em card"): tira de confiança em colunas com divisórias finas, "Sobre mim" com foto + citação editorial, "Minha abordagem" como lista numerada (I–IV), "Psicoterapia para quê" com marcadores de borda lateral, "Benefícios" em colunas simples, e a seção final de contato como um bloco de cor sólida (o momento visual mais forte da página). O logotipo completo aparece no topo do hero (pequeno, ~300px, para não repetir o problema de nitidez de versões antigas) — a Diana pediu para mantê-lo visível, então o cabeçalho combina o logo com a marca tipográfica "Diana Nogueira".
+
+A pedido dela, o site mostra só **uma** foto sua (na seção "Sobre mim") — o hero não repete uma segunda foto.
 
 ## Imagens e performance
 
-`assets/logo.png` e `assets/foto.png` são os arquivos de origem, em alta resolução — não são carregados diretamente pelo site. As páginas usam `<picture>` com variantes menores em WebP (com fallback JPEG) geradas a partir deles, o que reduz o peso de cada imagem em mais de 90%. A foto é recortada em dois enquadramentos distintos (rosto/tronco para o hero, corpo inteiro para "Sobre mim") definidos em `scripts/optimize-images.py`.
+`assets/logo.png` e `assets/foto.png` são os arquivos de origem, em alta resolução — não são carregados diretamente pelo site. As páginas usam `<picture>` com variantes menores em WebP (com fallback JPEG) geradas a partir deles, o que reduz o peso de cada imagem em mais de 90%. O corte de rosto/tronco (`FOTO_HERO_BOX`, em `scripts/optimize-images.py`) segue existindo só para compor o retrato da imagem de compartilhamento (og-image); o corpo inteiro (`FOTO_ABOUT_BOX`) é o único enquadramento usado na página em si.
 
 Se um desses dois arquivos for substituído (nova foto, novo logo), regenere as variantes:
 
@@ -44,7 +46,7 @@ pip install pillow
 python3 scripts/optimize-images.py
 ```
 
-Isso recria `assets/foto-hero-*`, `assets/foto-about-*` e `assets/og-image.jpg` (imagem usada nas prévias de compartilhamento no WhatsApp/redes sociais). Se a foto de origem mudar de pose/enquadramento, ajuste as coordenadas de recorte (`FOTO_HERO_BOX` / `FOTO_ABOUT_BOX`) no topo do script antes de rodar.
+Isso recria `assets/logo-*`, `assets/foto-about-*` e `assets/og-image.jpg` (imagem usada nas prévias de compartilhamento no WhatsApp/redes sociais). Se a foto de origem mudar de pose/enquadramento, ajuste as coordenadas de recorte (`FOTO_HERO_BOX` / `FOTO_ABOUT_BOX`) no topo do script antes de rodar.
 
 ## Google Analytics (GA4)
 

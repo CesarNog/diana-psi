@@ -111,7 +111,6 @@ section:nth-of-type(even){background:var(--surface)}
   .hero-lead{animation-delay:.3s}
   .hero-tags{animation-delay:.4s}
   .hero .btn-row{animation-delay:.5s}
-  .hero-media{opacity:0;animation:rise .9s ease forwards;animation-delay:.2s}
   @keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 
   .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
@@ -159,33 +158,17 @@ section:nth-of-type(even){background:var(--surface)}
 .hero{padding-top:3.5rem;padding-bottom:5rem}
 .hero-logo{display:block;width:min(300px,60vw);margin:0 auto 2.5rem}
 .hero-logo img{display:block;width:100%;height:auto}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:4rem;align-items:center}
+.hero-copy{max-width:700px;margin-left:auto;margin-right:auto}
 .hero-eyebrow{font-family:var(--font-sans);font-size:.85rem;font-weight:600;letter-spacing:.06em;color:var(--ink-soft);margin:0 0 1.25rem}
 .hero-eyebrow strong{color:var(--rose-deep);font-weight:700}
 .hero h1{margin-bottom:1.5rem}
-.hero-lead{max-width:52ch;color:var(--ink-soft);font-size:clamp(1.05rem,.4vw + .97rem,1.15rem)}
-.hero-tags{list-style:none;margin:1.75rem 0;padding:0;display:flex;flex-wrap:wrap;gap:.6rem}
+.hero-lead{max-width:52ch;margin-left:auto;margin-right:auto;color:var(--ink-soft);font-size:clamp(1.05rem,.4vw + .97rem,1.15rem)}
+.hero-tags{list-style:none;margin:1.75rem 0;padding:0;display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center}
 .hero-tags li{
   font-size:.82rem;font-weight:500;color:var(--rose-deep);background:rgba(140,58,91,.08);
   border:1px solid rgba(140,58,91,.18);border-radius:999px;padding:.4rem .95rem;
 }
 .hero .btn-row{margin-top:.5rem}
-
-.hero-media{position:relative}
-.hero-media .frame{
-  position:absolute;inset:1.1rem -1.1rem -1.1rem 1.1rem;background:var(--surface);
-  border-radius:var(--radius);z-index:0;
-}
-.hero-media picture{position:relative;z-index:1;display:block}
-.hero-media img{
-  border-radius:var(--radius);box-shadow:var(--shadow-soft);width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;
-}
-
-@media (max-width:900px){
-  .hero-grid{grid-template-columns:1fr;gap:2.75rem}
-  .hero-media{order:-1;max-width:340px;margin:0 auto}
-  .hero-copy{text-align:left}
-}
 
 /* ---------- trust strip ---------- */
 .trust{padding-top:3.5rem;padding-bottom:3.5rem}

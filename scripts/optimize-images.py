@@ -15,15 +15,16 @@ from PIL import Image, ImageDraw, ImageFont
 ASSETS = Path(__file__).resolve().parent.parent / "assets"
 FONTS = Path(__file__).resolve().parent / "fonts"
 
-# Recortes do retrato original (assets/foto.png, 832x1248), definidos à mão
-# para enquadrar bem o rosto (hero) e o corpo inteiro (seção Sobre).
-FOTO_HERO_BOX = (56, 0, 776, 900)   # rosto + tronco, proporção 4:5
+# Recortes do retrato original (assets/foto.png, 832x1248), definidos à mão.
+# FOTO_HERO_BOX (rosto + tronco) só é usada hoje no retrato da imagem de
+# compartilhamento (OG) — o site mostra só uma foto dela, no corpo do texto
+# da seção Sobre (FOTO_ABOUT_BOX), a pedido da Diana.
+FOTO_HERO_BOX = (56, 0, 776, 900)   # rosto + tronco, proporção 4:5 — usado só no OG
 FOTO_ABOUT_BOX = (60, 0, 772, 1248)  # corpo inteiro, enquadramento mais justo
 
 JOBS = [
     # (arquivo de origem ou None p/ usar crop, nome base, larguras, crop)
     ("logo.png", "logo", [600, 1200], None),
-    ("foto.png", "foto-hero", [480, 720, 960], FOTO_HERO_BOX),
     ("foto.png", "foto-about", [400, 700], FOTO_ABOUT_BOX),
 ]
 
