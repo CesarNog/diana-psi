@@ -7,8 +7,6 @@ Site institucional da psicóloga Diana Nogueira (CRP 06/234614). Site estático,
 ```
 index.html                  página principal (todas as seções)
 privacidade.html            política de privacidade / LGPD
-blog/index.html             listagem de artigos
-blog/*.html                 artigos individuais
 assets/site.css             CSS compartilhado por todas as páginas (design system)
 assets/logo.png             logotipo (arquivo de origem, em alta resolução)
 assets/foto.png             foto de perfil (arquivo de origem, em alta resolução)
@@ -55,9 +53,9 @@ O site já vem com o snippet do GA4 (`gtag.js`) preparado no `<head>` de cada p�
 Para ativar:
 
 1. Crie uma propriedade GA4 em [analytics.google.com](https://analytics.google.com) e copie o Measurement ID (formato `G-XXXXXXXXXX`).
-2. Substitua as duas ocorrências de `G-XXXXXXXXXX` em **cada** arquivo HTML (`index.html`, `privacidade.html`, `blog/index.html`, `blog/*.html`) — na tag `<script>` que define `window.GA_MEASUREMENT_ID` e na URL do `gtag/js?id=...`.
+2. Substitua as duas ocorrências de `G-XXXXXXXXXX` em **cada** arquivo HTML (`index.html`, `privacidade.html`) — na tag `<script>` que define `window.GA_MEASUREMENT_ID` e na URL do `gtag/js?id=...`.
    ```
-   grep -rl "G-XXXXXXXXXX" *.html blog/*.html
+   grep -rl "G-XXXXXXXXXX" *.html
    ```
    ajuda a listar todos os arquivos que ainda precisam da troca.
 3. Publique. Sem um ID válido, o script simplesmente não envia dados — não é preciso removê-lo em ambiente de testes.
@@ -76,19 +74,6 @@ Como o site agora coleta dados de navegação via GA4, foram adicionados:
 - Um aviso de cookies (banner fixo no rodapé) que aparece na primeira visita, com opções "Aceitar" / "Recusar". A escolha é salva em `localStorage` (`diana-cookie-consent`) e controla o Google Consent Mode (`analytics_storage`).
 
 Se o e-mail de contato do site mudar, atualize também o endereço citado em `privacidade.html`.
-
-## Blog
-
-`blog/index.html` lista os artigos; cada artigo é um arquivo HTML próprio dentro de `blog/`, com o mesmo cabeçalho/rodapé do resto do site e marcação `BlogPosting` (JSON-LD) para SEO.
-
-Para publicar um novo artigo:
-
-1. Duplique um artigo existente em `blog/` (ex.: `blog/sinais-para-buscar-psicoterapia.html`) e ajuste título, descrição, texto e o bloco `application/ld+json`.
-2. Adicione um card correspondente em `blog/index.html` (dentro de `.blog-grid`).
-3. Adicione a nova URL em `sitemap.xml`.
-4. Lembre-se de trocar `G-XXXXXXXXXX` no novo arquivo também (ver seção do GA4).
-
-Ideias de pauta ficam a critério da Diana — os dois artigos iniciais têm conteúdo educativo genérico (não fazem afirmações clínicas específicas sobre casos reais) e servem de modelo de estrutura e tom.
 
 ## Sobre a seção "Ética e confiança" (e por que não há depoimentos)
 
