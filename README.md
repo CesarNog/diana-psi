@@ -18,6 +18,27 @@ sitemap.xml
 
 Todo o texto está em `index.html`. CSS e JS são inline — um arquivo só, sem dependências além das Google Fonts.
 
+## Google Analytics (GA4)
+
+O site já vem com o snippet do GA4 (`gtag.js`) preparado no `<head>` de
+`index.html`, junto com eventos customizados (`contact_click`) disparados
+nos botões de WhatsApp e no link de e-mail (hero, seção de contato, rodapé
+e botão flutuante), identificando de onde veio o clique via
+`data-track-location`.
+
+Para ativar:
+
+1. Crie uma propriedade GA4 em [analytics.google.com](https://analytics.google.com) e copie o Measurement ID (formato `G-XXXXXXXXXX`).
+2. Em `index.html`, substitua as duas ocorrências de `G-XXXXXXXXXX` (na tag `<script>` que define `window.GA_MEASUREMENT_ID` e na URL do `gtag/js?id=...`) pelo ID real.
+3. Publique. Sem um ID válido, o script simplesmente não envia dados — não é preciso removê-lo em ambiente de testes.
+
+## Animações
+
+Efeitos de entrada (hero) e de revelação ao rolar a página (`.reveal` /
+`.reveal-group`) são feitos com CSS + `IntersectionObserver` e respeitam
+`prefers-reduced-motion`. O link ativo no menu também é destacado
+automaticamente conforme a seção visível.
+
 ## Deploy
 
 Push na branch `main` publica automaticamente (GitHub Pages → Source: Deploy from a branch → `main` / root).
