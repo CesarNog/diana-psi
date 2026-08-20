@@ -1,24 +1,24 @@
 :root{
-  /* neutrals */
-  --bg:#faf7f4;
-  --surface:#f3eaf0;
-  --surface-deep:#5a2740;
-  --cream:#fbf3ef;
-  --ink:#2e2430;
-  --ink-soft:#5b4e5d;
-  --line:#e4d8de;
+  /* neutrals — paleta original do site */
+  --bg:#f8f5f1;
+  --surface:#f3ece8;
+  --surface-deep:#3b1b27;  /* tom escuro derivado do rose-deep, sem equivalente na paleta original (usado só na seção final) */
+  --cream:#f8f5f1;
+  --ink:#6b5170;
+  --ink-soft:#7d6482;
+  --line:#e7dbdf;
 
-  /* brand accents (from the existing logo/photography palette) */
-  --rose:#b5527a;       /* large headings / decorative accents only */
-  --rose-deep:#8c3a5b;  /* CTAs, links, small text-safe */
-  --lilac:#7c6693;      /* secondary accent: labels, numerals, icons */
+  /* brand accents (paleta original do logo/fotografia) */
+  --rose:#cb6f90;        /* large headings / decorative accents only */
+  --rose-deep:#a34a6d;   /* CTAs, links, small text-safe */
+  --lilac:#856190;       /* secondary accent: labels, numerals, icons */
   --wa:#25d366;
 
   --max:1120px;
   --content-max:680px;
 
-  --font-serif:"Fraunces","Iowan Old Style",Georgia,serif;
-  --font-sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --font-serif:"Cormorant Garamond",Georgia,serif;
+  --font-sans:"Quicksand",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
 
   --radius:10px;
   --shadow-soft:0 18px 40px -22px rgba(46,36,48,.28);
@@ -104,7 +104,8 @@ section:nth-of-type(even){background:var(--surface)}
 
 /* ---------- motion ---------- */
 @media (prefers-reduced-motion: no-preference){
-  .hero-eyebrow,.hero h1,.hero-lead,.hero-tags,.hero .btn-row{opacity:0;animation:rise .75s ease forwards}
+  .hero-logo,.hero-eyebrow,.hero h1,.hero-lead,.hero-tags,.hero .btn-row{opacity:0;animation:rise .75s ease forwards}
+  .hero-logo{animation-delay:0s}
   .hero-eyebrow{animation-delay:.05s}
   .hero h1{animation-delay:.15s}
   .hero-lead{animation-delay:.3s}
@@ -156,6 +157,8 @@ section:nth-of-type(even){background:var(--surface)}
 
 /* ---------- hero ---------- */
 .hero{padding-top:3.5rem;padding-bottom:5rem}
+.hero-logo{display:block;width:min(300px,60vw);margin:0 auto 2.5rem}
+.hero-logo img{display:block;width:100%;height:auto}
 .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:4rem;align-items:center}
 .hero-eyebrow{font-family:var(--font-sans);font-size:.85rem;font-weight:600;letter-spacing:.06em;color:var(--ink-soft);margin:0 0 1.25rem}
 .hero-eyebrow strong{color:var(--rose-deep);font-weight:700}
