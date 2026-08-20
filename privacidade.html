@@ -7,12 +7,12 @@
 <meta name="description" content="Política de privacidade e uso de cookies do site de Diana Nogueira, psicóloga clínica CRP 06/234614, em conformidade com a LGPD.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://psidiananogueira.com.br/privacidade.html">
-<meta name="theme-color" content="#f8f5f1">
+<meta name="theme-color" content="#faf7f4">
 <link rel="icon" href="assets/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/site.css">
 
 <!-- Google Analytics (GA4) -->
@@ -31,7 +31,8 @@
 <header class="site-header">
   <nav class="nav" aria-label="Navegação principal">
     <a class="brand" href="index.html">
-      <span>Diana Nogueira</span>
+      <span class="brand-name">Diana Nogueira</span>
+      <span class="brand-role">Psicóloga Clínica</span>
     </a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">☰</button>
     <ul class="nav-links" id="menu">
@@ -41,6 +42,7 @@
       <li><a href="blog/">Blog</a></li>
       <li><a href="index.html#contato">Contato</a></li>
     </ul>
+    <a class="nav-cta" href="https://wa.me/5519994314781" target="_blank" rel="noopener" data-track="whatsapp" data-track-location="nav">Agendar</a>
   </nav>
 </header>
 
@@ -184,6 +186,20 @@
     localStorage.setItem(KEY, 'denied');
     applyConsent('denied');
     banner.classList.remove('show');
+  });
+})();
+
+// Google Analytics contact-click events
+(function(){
+  document.querySelectorAll('[data-track]').forEach(function(el){
+    el.addEventListener('click', function(){
+      if (typeof gtag === 'function') {
+        gtag('event', 'contact_click', {
+          method: el.getAttribute('data-track'),
+          location: el.getAttribute('data-track-location') || 'unknown'
+        });
+      }
+    });
   });
 })();
 </script>
