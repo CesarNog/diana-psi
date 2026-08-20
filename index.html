@@ -12,23 +12,30 @@
 <meta property="og:url" content="https://psidiananogueira.com.br/">
 <meta property="og:title" content="Diana Nogueira — Psicóloga Clínica CRP 06/234614">
 <meta property="og:description" content="Atendimento psicológico online para adultos e idosos. Encontre novas possibilidades para além da dor e construa uma vida guiada pelos seus valores.">
-<meta property="og:image" content="https://psidiananogueira.com.br/assets/logo.png">
+<meta property="og:image" content="https://psidiananogueira.com.br/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://psidiananogueira.com.br/assets/og-image.jpg">
 <meta name="theme-color" content="#f8f5f1">
 <meta name="robots" content="index,follow">
 
 <!-- Google Analytics (GA4) -->
-<!-- Substitua "G-XXXXXXXXXX" (nas duas linhas abaixo) pelo ID de métricas real
-     do GA4 antes de publicar em produção. Sem um ID válido este script não
-     envia dados a lugar nenhum. -->
+<!-- Substitua "G-XXXXXXXXXX" (nas duas ocorrências abaixo) pelo ID de métricas
+     real do GA4 antes de publicar em produção. Sem um ID válido este script
+     não envia dados a lugar nenhum.
+     Consentimento (LGPD): por padrão o armazenamento de analytics fica
+     "denied" (Google Consent Mode v2). Só passa a "granted" quando a pessoa
+     visitante aceita no aviso de cookies — ver script no fim do <body>. -->
 <script>window.GA_MEASUREMENT_ID = 'G-XXXXXXXXXX';</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){ dataLayer.push(arguments); }
+  gtag('consent', 'default', { analytics_storage: 'denied', ad_storage: 'denied' });
   gtag('js', new Date());
   gtag('config', window.GA_MEASUREMENT_ID, { anonymize_ip: true });
 </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 
 <link rel="icon" href="assets/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="assets/favicon.png">
@@ -43,7 +50,7 @@
   "alternateName": "Psicóloga Diana Nogueira",
   "description": "Psicóloga clínica (CRP 06/234614). Atendimento psicológico online para adultos e idosos.",
   "url": "https://psidiananogueira.com.br/",
-  "image": "https://psidiananogueira.com.br/assets/logo.png",
+  "image": "https://psidiananogueira.com.br/assets/logo-1200.jpg",
   "email": "psidiananogueira@gmail.com",
   "telephone": "+5519994314781",
   "availableLanguage": "pt-BR",
@@ -55,216 +62,13 @@
   }
 }
 </script>
-<style>
-:root{
-  --bg:#f8f5f1;
-  --bg-alt:#f3ece8;
-  --rose:#cb6f90;
-  --rose-deep:#a34a6d;
-  --lilac:#b084b8;
-  --lilac-text:#856190;
-  --ink:#6b5170;
-  --ink-soft:#7d6482;
-  --line:#e7dbdf;
-  --wa:#25d366;
-  --max:1080px;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:76px}
-body{
-  margin:0;background:var(--bg);color:var(--ink);
-  font-family:"Quicksand",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  font-size:1.0625rem;line-height:1.75;-webkit-font-smoothing:antialiased;
-}
-img{max-width:100%;display:block}
-a{color:var(--rose-deep)}
-.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-
-/* ---------- header / nav ---------- */
-.site-header{
-  position:sticky;top:0;z-index:50;background:rgba(248,245,241,.94);
-  backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--line);
-}
-.nav{
-  max-width:var(--max);margin:0 auto;padding:.55rem 1.25rem;
-  display:flex;align-items:center;gap:1rem;justify-content:space-between;
-}
-.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit}
-.brand img{display:none}
-.brand span{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.15rem;color:var(--rose-deep);white-space:nowrap}
-.nav-links{display:flex;gap:1.35rem;list-style:none;margin:0;padding:0;flex-wrap:wrap;justify-content:flex-end}
-.nav-links a{
-  text-decoration:none;color:var(--ink-soft);font-size:.9rem;font-weight:500;
-  padding:.25rem 0;border-bottom:1.5px solid transparent;transition:color .2s,border-color .2s;
-}
-.nav-links a:hover,.nav-links a:focus-visible{color:var(--rose-deep);border-color:var(--rose-deep)}
-.nav-links a.active{color:var(--rose-deep);border-color:var(--rose-deep)}
-.nav-toggle{display:none;background:none;border:0;color:var(--rose);font-size:1.6rem;line-height:1;padding:.25rem .5rem;cursor:pointer;transition:transform .2s ease}
-.nav-toggle:active{transform:scale(.9)}
-
-/* ---------- layout ---------- */
-section{padding:5rem 1.25rem}
-section:nth-of-type(even){background:var(--bg-alt)}
-.wrap{max-width:var(--max);margin:0 auto}
-h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;color:var(--rose);margin:0 0 1.25rem;line-height:1.2}
-h1{font-size:clamp(2.2rem,6vw,3.1rem)}
-h2{font-size:clamp(1.9rem,4.4vw,2.5rem);text-align:center}
-p{margin:0 0 1.15rem}
-.lead{font-size:clamp(1.05rem,2.2vw,1.25rem);color:var(--ink-soft)}
-
-/* ---------- hero ---------- */
-.hero{text-align:center;padding-top:4rem;padding-bottom:4.5rem}
-.hero img.logo{width:min(560px,92vw);margin:0 auto 2rem}
-.hero .name{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(2.2rem,6vw,3rem);color:var(--rose);margin:0}
-.hero .crp{color:var(--lilac-text);font-size:.95rem;letter-spacing:.04em;margin:.35rem 0 2rem}
-.hero .claim{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(1.6rem,3.6vw,2.15rem);color:var(--rose);max-width:760px;margin:0 auto 1.5rem;line-height:1.35}
-.hero .intro{max-width:760px;margin:0 auto 2.25rem;color:var(--ink-soft)}
-
-/* ---------- animations ---------- */
-@media (prefers-reduced-motion: no-preference){
-  .hero .logo,.hero .claim,.hero .intro,.hero .btn-row{
-    opacity:0;animation:hero-in .8s ease forwards;
-  }
-  .hero .logo{animation-delay:.05s}
-  .hero .claim{animation-delay:.2s}
-  .hero .intro{animation-delay:.35s}
-  .hero .btn-row{animation-delay:.5s}
-  @keyframes hero-in{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
-
-  .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
-  .reveal.in-view{opacity:1;transform:translateY(0)}
-  .reveal-group>*{opacity:0;transform:translateY(20px);transition:opacity .55s ease,transform .55s ease}
-  .reveal-group.in-view>*{opacity:1;transform:translateY(0)}
-  .reveal-group.in-view>*:nth-child(1){transition-delay:.05s}
-  .reveal-group.in-view>*:nth-child(2){transition-delay:.15s}
-  .reveal-group.in-view>*:nth-child(3){transition-delay:.25s}
-  .reveal-group.in-view>*:nth-child(4){transition-delay:.35s}
-
-  .wa-float{animation:wa-pulse 2.6s ease-in-out infinite}
-  .wa-float:hover{animation-play-state:paused}
-  @keyframes wa-pulse{
-    0%,100%{box-shadow:0 6px 18px rgba(0,0,0,.22),0 0 0 0 rgba(37,211,102,.45)}
-    50%{box-shadow:0 6px 18px rgba(0,0,0,.22),0 0 0 10px rgba(37,211,102,0)}
-  }
-}
-.wa-float{transition:transform .2s ease}
-.wa-float:hover{transform:scale(1.08)}
-
-/* ---------- buttons ---------- */
-.btn{
-  display:inline-flex;align-items:center;gap:.55rem;text-decoration:none;
-  padding:.85rem 1.9rem;border-radius:999px;font-weight:600;font-size:1rem;
-  transition:transform .15s ease,box-shadow .2s ease,background .2s ease;
-}
-.btn:hover{transform:translateY(-2px)}
-.btn:active{transform:translateY(0) scale(.97)}
-.btn:focus-visible{outline:2px solid var(--rose-deep);outline-offset:3px}
-.btn-primary{background:var(--rose-deep);color:#fff;box-shadow:0 6px 18px rgba(163,74,109,.26)}
-.btn-primary:hover{background:#93405f}
-.btn-ghost{border:1.5px solid var(--rose-deep);color:var(--rose-deep)}
-.btn-ghost:hover{background:rgba(163,74,109,.08)}
-.btn-row{display:flex;gap:.9rem;flex-wrap:wrap;justify-content:center}
-
-/* ---------- about ---------- */
-.about{display:grid;grid-template-columns:320px 1fr;gap:3rem;align-items:start}
-.about img{border-radius:10px;box-shadow:0 10px 30px rgba(107,81,112,.14);width:100%}
-.about p{text-align:justify;text-justify:inter-word}
-
-/* ---------- pillar lists ---------- */
-.pillars{list-style:none;margin:2rem 0 0;padding:0;display:grid;gap:1.15rem}
-.pillars li{
-  position:relative;padding:1.25rem 1.5rem 1.25rem 3.4rem;background:rgba(255,255,255,.55);
-  border:1px solid var(--line);border-radius:12px;
-}
-.pillars li::before{
-  content:"";position:absolute;left:1.25rem;top:1.5rem;width:20px;height:20px;
-  background:no-repeat center/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23cb6f90'%3E%3Cpath d='M12 2c-1 5-5 6-7 9-1.8 2.7-.6 6.6 2.4 8 2.6 1.2 5.8.2 7.4-2.2 2.3-3.4 1.3-8.4-2.8-14.8z' opacity='.75'/%3E%3Cpath d='M9 21c1-4 3-7 6-9' stroke='%23b084b8' stroke-width='1.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-}
-.pillars strong{color:var(--rose-deep);font-weight:600}
-.section-intro{max-width:820px;margin:0 auto 1rem;text-align:justify}
-
-/* ---------- contact ---------- */
-.contact{text-align:center}
-.contact img.logo{width:min(440px,88vw);margin:2.5rem auto 1.75rem}
-.contact .name{font-family:"Cormorant Garamond",Georgia,serif;font-size:2rem;color:var(--rose);margin:0}
-.contact .crp{color:var(--lilac-text);font-size:.9rem;margin:.3rem 0 2rem}
-.contact-list{list-style:none;padding:0;margin:0 0 2rem;display:grid;gap:.8rem;justify-content:center}
-.contact-list a{display:inline-flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--ink);font-weight:500}
-.contact-list a:hover{color:var(--rose-deep)}
-.contact-list svg{width:22px;height:22px;flex:none}
-
-/* ---------- floating whatsapp ---------- */
-.wa-float{
-  position:fixed;right:1.1rem;bottom:1.1rem;z-index:60;width:56px;height:56px;border-radius:50%;
-  background:var(--wa);display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.22);
-}
-.wa-float svg{width:30px;height:30px;fill:#fff}
-
-/* ---------- footer ---------- */
-.site-footer{
-  background:var(--bg-alt);border-top:1px solid var(--line);
-  padding:3.5rem 1.25rem 0;color:var(--ink-soft);font-size:.92rem;
-}
-.footer-grid{
-  display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:2.5rem;
-  padding-bottom:2.5rem;border-bottom:1px solid var(--line);
-}
-.footer-brand .footer-name{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.5rem;color:var(--rose)}
-.footer-brand p{margin:.4rem 0 0;font-size:.85rem}
-.footer-links,.footer-contact{display:flex;flex-direction:column;gap:.65rem}
-.footer-links h3,.footer-contact h3{
-  font-family:"Cormorant Garamond",Georgia,serif;font-size:1.05rem;color:var(--rose-deep);
-  margin:0 0 .3rem;font-weight:600;
-}
-.footer-links a,.footer-contact a{
-  color:var(--ink-soft);text-decoration:none;font-size:.9rem;width:fit-content;
-  border-bottom:1px solid transparent;transition:color .2s ease,border-color .2s ease,transform .2s ease;
-}
-.footer-links a:hover,.footer-contact a:hover,
-.footer-links a:focus-visible,.footer-contact a:focus-visible{
-  color:var(--rose-deep);border-color:var(--rose-deep);transform:translateX(3px);
-}
-.footer-bottom{
-  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;
-  padding:1.5rem 0;font-size:.8rem;
-}
-.footer-bottom p{margin:0}
-.to-top{
-  color:var(--rose-deep);text-decoration:none;font-size:.8rem;font-weight:600;
-  border:1px solid var(--line);border-radius:999px;padding:.4rem 1rem;
-  transition:background .2s ease,transform .2s ease;
-}
-.to-top:hover{background:rgba(163,74,109,.08);transform:translateY(-2px)}
-
-@media (max-width:820px){
-  .footer-grid{grid-template-columns:1fr;gap:2rem;text-align:left}
-  .footer-bottom{justify-content:center;text-align:center}
-}
-
-@media (max-width:820px){
-  .about{grid-template-columns:1fr;gap:2rem}
-  .about img{max-width:300px;margin:0 auto}
-  .nav-toggle{display:block}
-  .nav-links{
-    display:flex;position:absolute;left:0;right:0;top:100%;flex-direction:column;
-    background:var(--bg);border-bottom:1px solid var(--line);padding:1rem 1.5rem;gap:.9rem;
-    justify-content:flex-start;align-items:flex-start;
-    opacity:0;visibility:hidden;transform:translateY(-8px);pointer-events:none;
-    transition:opacity .2s ease,transform .2s ease,visibility .2s;
-  }
-  .nav-links.open{opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto}
-  .nav{position:relative}
-  section{padding:3.5rem 1.25rem}
-  .about p,.section-intro{text-align:left}
-}
-</style>
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 
 <header class="site-header">
   <nav class="nav" aria-label="Navegação principal">
     <a class="brand" href="#principal">
-      <img src="assets/logo.png" alt="" aria-hidden="true">
       <span>Diana Nogueira</span>
     </a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">☰</button>
@@ -274,6 +78,7 @@ p{margin:0 0 1.15rem}
       <li><a href="#abordagem">Minha abordagem</a></li>
       <li><a href="#psicoterapia">Psicoterapia para quê?</a></li>
       <li><a href="#beneficios">Benefícios online</a></li>
+      <li><a href="blog/">Blog</a></li>
       <li><a href="#contato">Contato</a></li>
     </ul>
   </nav>
@@ -283,7 +88,10 @@ p{margin:0 0 1.15rem}
 
 <section id="principal" class="hero">
   <div class="wrap">
-    <img class="logo" src="assets/logo.png" alt="Logotipo Diana Nogueira — psicóloga clínica">
+    <picture>
+      <source type="image/webp" srcset="assets/logo-600.webp 600w, assets/logo-1200.webp 1200w" sizes="(max-width:560px) 92vw, 560px">
+      <img class="logo" src="assets/logo-1200.jpg" srcset="assets/logo-600.jpg 600w, assets/logo-1200.jpg 1200w" sizes="(max-width:560px) 92vw, 560px" width="1200" height="800" alt="Logotipo Diana Nogueira — psicóloga clínica" fetchpriority="high">
+    </picture>
     <h1 class="sr-only">Diana Nogueira — Psicóloga Clínica</h1>
     <p class="claim">Encontre novas possibilidades para além da dor e construa uma vida guiada pelos seus valores.</p>
     <p class="intro lead">Atendimento psicológico online para adultos e idosos. Através de uma abordagem focada em abrir caminhos para viver o momento presente, com abertura às experiências e alinhamento aos valores pessoais.</p>
@@ -298,7 +106,10 @@ p{margin:0 0 1.15rem}
   <div class="wrap">
     <h2 class="reveal">Sobre mim</h2>
     <div class="about reveal">
-      <img src="assets/foto.png" alt="Diana Nogueira, psicóloga clínica" loading="lazy">
+      <picture>
+        <source type="image/webp" srcset="assets/foto-350.webp 350w, assets/foto-700.webp 700w" sizes="(max-width:820px) 300px, 320px">
+        <img src="assets/foto-700.jpg" srcset="assets/foto-350.jpg 350w, assets/foto-700.jpg 700w" sizes="(max-width:820px) 300px, 320px" width="700" height="1050" alt="Diana Nogueira, psicóloga clínica" loading="lazy">
+      </picture>
       <div>
         <p>Me chamo Diana Nogueira Marcos de Souza (CRP 06/234614), sou psicóloga clínica dedicada a oferecer um espaço de acolhimento seguro, ético e livre de julgamentos. Atendo adultos e idosos exclusivamente online, proporcionando o conforto e a flexibilidade necessários para priorizar e cuidar da saúde mental.</p>
         <p>Minha prática é voltada para o atendimento individual, pautada por uma escuta qualificada e pela construção de uma aliança terapêutica sólida. O meu objetivo clínico é caminhar ao seu lado a partir do momento presente e de uma conexão autêntica, oferecendo suporte técnico e humano para tentar auxiliar no desenvolvimento da flexibilidade psicológica e no compromisso com ações alinhadas aos seus valores.</p>
@@ -344,6 +155,19 @@ p{margin:0 0 1.15rem}
   </div>
 </section>
 
+<section id="confianca">
+  <div class="wrap">
+    <h2 class="reveal">Ética, sigilo e confiança</h2>
+    <p class="section-intro reveal">Antes de escolher uma psicóloga, é natural querer saber com quem você vai compartilhar a sua história. Alguns pontos que sustentam esse cuidado:</p>
+    <ul class="pillars reveal-group">
+      <li><strong>Registro profissional ativo:</strong> CRP 06/234614, verificável publicamente no cadastro do <a href="https://cfp.org.br/" target="_blank" rel="noopener">Conselho Federal de Psicologia</a>.</li>
+      <li><strong>Sigilo profissional:</strong> tudo o que é compartilhado nas sessões é protegido pelo Código de Ética Profissional do Psicólogo.</li>
+      <li><strong>Atendimento online regulamentado:</strong> a psicoterapia por vídeo é reconhecida pelo Conselho Federal de Psicologia, com as mesmas garantias éticas do atendimento presencial.</li>
+    </ul>
+    <p class="trust-note">Prefere ouvir de quem já foi atendida? Por orientação do Código de Ética da Psicologia, depoimentos de pacientes não são usados aqui como estratégia de divulgação — a confiança se constrói na primeira conversa. <a href="https://wa.me/5519994314781" target="_blank" rel="noopener" data-track="whatsapp" data-track-location="confianca">Marque uma conversa inicial pelo WhatsApp</a>.</p>
+  </div>
+</section>
+
 <section id="contato" class="contact">
   <div class="wrap">
     <h2 class="reveal">Dê o primeiro passo hoje</h2>
@@ -351,7 +175,10 @@ p{margin:0 0 1.15rem}
     <div class="btn-row">
       <a class="btn btn-primary" href="https://wa.me/5519994314781" target="_blank" rel="noopener" data-track="whatsapp" data-track-location="contato">Agendar consulta online</a>
     </div>
-    <img class="logo" src="assets/logo.png" alt="" aria-hidden="true">
+    <picture>
+      <source type="image/webp" srcset="assets/logo-600.webp 600w, assets/logo-1200.webp 1200w" sizes="(max-width:820px) 88vw, 440px">
+      <img class="logo" src="assets/logo-1200.jpg" srcset="assets/logo-600.jpg 600w, assets/logo-1200.jpg 1200w" sizes="(max-width:820px) 88vw, 440px" width="1200" height="800" alt="" aria-hidden="true" loading="lazy">
+    </picture>
     <ul class="contact-list">
       <li>
         <a href="https://wa.me/5519994314781" target="_blank" rel="noopener" data-track="whatsapp" data-track-location="contact-list">
@@ -388,6 +215,8 @@ p{margin:0 0 1.15rem}
       <a href="#abordagem">Minha abordagem</a>
       <a href="#psicoterapia">Psicoterapia para quê?</a>
       <a href="#beneficios">Benefícios online</a>
+      <a href="#confianca">Ética e confiança</a>
+      <a href="blog/">Blog</a>
       <a href="#contato">Contato</a>
     </nav>
     <div class="footer-contact">
@@ -397,10 +226,20 @@ p{margin:0 0 1.15rem}
     </div>
   </div>
   <div class="wrap footer-bottom">
-    <p>© <span id="year"></span> Diana Nogueira Marcos de Souza. Todos os direitos reservados.</p>
+    <p>© <span id="year"></span> Diana Nogueira Marcos de Souza. Todos os direitos reservados. · <a href="privacidade.html">Privacidade</a></p>
     <a class="to-top" href="#principal">↑ Voltar ao topo</a>
   </div>
 </footer>
+
+<div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Aviso de cookies">
+  <div class="wrap">
+    <p>Usamos cookies de análise (Google Analytics) apenas para entender como o site é utilizado. Nenhum dado é vendido ou compartilhado com terceiros para fins publicitários. Saiba mais na <a href="privacidade.html">Política de Privacidade</a>.</p>
+    <div class="cookie-actions">
+      <button type="button" class="decline" id="cookie-decline">Recusar</button>
+      <button type="button" class="accept" id="cookie-accept">Aceitar</button>
+    </div>
+  </div>
+</div>
 
 <script>
 (function(){
@@ -424,6 +263,41 @@ p{margin:0 0 1.15rem}
 (function(){
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
+})();
+
+// LGPD cookie consent (gates Google Consent Mode's analytics_storage)
+(function(){
+  var KEY = 'diana-cookie-consent';
+  var banner = document.getElementById('cookie-banner');
+  var accept = document.getElementById('cookie-accept');
+  var decline = document.getElementById('cookie-decline');
+  if (!banner || !accept || !decline) return;
+
+  function applyConsent(choice){
+    if (typeof gtag === 'function') {
+      gtag('consent', 'update', {
+        analytics_storage: choice === 'granted' ? 'granted' : 'denied'
+      });
+    }
+  }
+
+  var stored = localStorage.getItem(KEY);
+  if (stored === 'granted' || stored === 'denied') {
+    applyConsent(stored);
+  } else {
+    banner.classList.add('show');
+  }
+
+  accept.addEventListener('click', function(){
+    localStorage.setItem(KEY, 'granted');
+    applyConsent('granted');
+    banner.classList.remove('show');
+  });
+  decline.addEventListener('click', function(){
+    localStorage.setItem(KEY, 'denied');
+    applyConsent('denied');
+    banner.classList.remove('show');
+  });
 })();
 
 // scroll-reveal animations (skipped entirely for prefers-reduced-motion)
